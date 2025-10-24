@@ -13,14 +13,14 @@ class Program
         while (körMeny)
         {
             Console.Clear();
-            Console.WriteLine("=== Meny med 5 Övningar ===");
-            Console.WriteLine("1. Vänd Ord");
-            Console.WriteLine("2. Unika Namn");
-            Console.WriteLine("3. Kortaste och Längsta Ord");
-            Console.WriteLine("4. Hitta Jämna Tal");
-            Console.WriteLine("5. Ta Bort Korta Ord");
-            Console.WriteLine("6. Avsluta");
-            Console.Write("\nVälj ett alternativ: ");
+            Console.WriteLine("=== Meny with 6 alternativs ===");
+            Console.WriteLine("1. Reverse words");
+            Console.WriteLine("2. UniqueName");
+            Console.WriteLine("3. ShortLongWords");
+            Console.WriteLine("4. EvenNumbers");
+            Console.WriteLine("5. RemoveShortWords");
+            Console.WriteLine("6. Quit");
+            Console.Write("\n Choose Option: ");
 
             switch (Console.ReadLine())
             {
@@ -28,23 +28,23 @@ class Program
                     metodManager.Reverse();
                     break;
                 case "2":
-                    UnikaNamn();
+                    metodManager.UniqueName();
                     break;
                 case "3":
-                    KortOchLångtOrd();
+                    metodManager.ShortLongWords();
                     break;
                 case "4":
-                    JämnaTal();
+                    metodManager.EvenNumbers();
                     break;
                 case "5":
-                    TaBortKortaOrd();
+                    metodManager.RemoveShortWords();
                     break;
                 case "6":
                     körMeny = false;
-                    Console.WriteLine("Programmet avslutas...");
+                    Console.WriteLine("Program ends...");
                     break;
                 default:
-                    Console.WriteLine("Fel val, försök igen!");
+                    Console.WriteLine("Error");
                     break;
             }
 
@@ -55,3 +55,4 @@ class Program
             }
         }
     }
+}
